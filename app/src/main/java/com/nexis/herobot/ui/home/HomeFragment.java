@@ -23,13 +23,9 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        // Butona tıklandığında ChatActivity'yi başlat
-        binding.startChatButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+
                 startChatActivity();
-            }
-        });
+
 
         return root;
     }
