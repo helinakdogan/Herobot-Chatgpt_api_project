@@ -102,7 +102,7 @@ public class ChatActivity extends AppCompatActivity {
 
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/chat/completions")
-                .header("Authorization", "Bearer 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")
+                .header("Authorization", "")
                 .post(body)
                 .build();
 
