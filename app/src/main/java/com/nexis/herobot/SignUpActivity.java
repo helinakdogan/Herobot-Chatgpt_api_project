@@ -3,43 +3,31 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.Toast;
+
 import com.nexis.herobot.Login;
+import com.nexis.herobot.MainActivity;
+import com.nexis.herobot.R;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.nexis.herobot.MainActivity;
 
-public class SignUp extends AppCompatActivity {
+public class SignUpActivity extends AppCompatActivity {
 
-    TextInputEditText editUsername, editPassword;
-
-    Button buttonSgn, linkLogin;
-
-    FirebaseAuth mAuth;
+    private TextInputEditText editUsername, editPassword;
+    private Button buttonSgn, linkLogin;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
-
-        // Ekran kenarlarını işlemek için gerekli ayarlamalar
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.activity_sign_up), new ViewCompat.OnApplyWindowInsetsListener() {
-            @Override
-            public WindowInsetsCompat onApplyWindowInsets(View v, WindowInsetsCompat insets) {
-                v.setPadding(insets.getSystemWindowInsetLeft(), insets.getSystemWindowInsetTop(), insets.getSystemWindowInsetRight(), insets.getSystemWindowInsetBottom());
-                return insets;
-            }
-        });
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -61,16 +49,15 @@ public class SignUp extends AppCompatActivity {
         buttonSgn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username, password;
-                username = editUsername.getText().toString();
-                password = editPassword.getText().toString();
+                String username = editUsername.getText().toString();
+                String password = editPassword.getText().toString();
 
                 if (TextUtils.isEmpty(username)) {
-                    Toast.makeText(SignUp.this, "please enter your username", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Please enter your username", Toast.LENGTH_SHORT).show();
                     return;
                 }
                 if (TextUtils.isEmpty(password)) {
-                    Toast.makeText(SignUp.this, "please enter your password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUpActivity.this, "Please enter your password", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -79,18 +66,22 @@ public class SignUp extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(SignUp.this, "Account created.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(SignUpActivity.this, "Account created.", Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
                                     finish();
-
                                 } else {
-                                    // If sign in fails, display a message to the user.
-                                    Toast.makeText(SignUp.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(SignUpActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
             }
         });
+
+        // Ekran kenarlarını manuel olarak ayarla
+        View rootView = findViewById(android.R.id.content);
+        int systemInsetsTop = getResources().getDimensionPixelSize(getResources().getIdentifier("status_bar_height", "dimen", "android"));
+        int systemInsetsBottom = getResources().getDimensionPixelSize(getResources().getIdentifier("navigation_bar_height", "dimen", "android"));
+        rootView.setPadding(0, systemInsetsTop, 0, systemInsetsBottom);
     }
 }
