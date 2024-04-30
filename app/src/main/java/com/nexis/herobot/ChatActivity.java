@@ -41,7 +41,7 @@ public class ChatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_home);
+        setContentView(R.layout.activity_chat);
 
         messageList = new ArrayList<>();
         recyclerView = findViewById(R.id.recycler_view);
@@ -86,7 +86,7 @@ public class ChatActivity extends AppCompatActivity {
 
         JSONObject jsonBody = new JSONObject();
         try {
-            jsonBody.put("model", "gpt-3.5-turbo-0125");
+            jsonBody.put("model", "GPT-3.5 Turbo");
             JSONArray messagesArray = new JSONArray();
             JSONObject messageObject = new JSONObject();
             messageObject.put("role", "user");
@@ -102,7 +102,7 @@ public class ChatActivity extends AppCompatActivity {
 
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/chat/completions")
-                .header("Authorization", "")
+                .header("Authorization", "Bearer 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")
                 .post(body)
                 .build();
 

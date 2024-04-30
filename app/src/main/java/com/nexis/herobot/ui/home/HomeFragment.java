@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import android.widget.Button;
 
 import com.nexis.herobot.databinding.FragmentHomeBinding;
 import com.nexis.herobot.ChatActivity;
@@ -23,12 +24,20 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
+        // Butonu bul
+        Button buttonStartChat = binding.buttonStartChat;
 
+        // Butona tıklanma olayını ekle
+        buttonStartChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startChatActivity();
-
+            }
+        });
 
         return root;
     }
+
 
     // ChatActivity'i başlatmak için metod
     private void startChatActivity() {
