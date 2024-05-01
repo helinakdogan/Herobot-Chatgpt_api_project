@@ -25,10 +25,12 @@
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
-        android:layout_height="206dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="top|end"
         android:layout_marginEnd="@dimen/fab_margin"
         android:layout_marginTop="65dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        app:backgroundTint="#FFC107"
+        app:tint="#E91E63"
+        app:srcCompat="@drawable/baseline_star" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

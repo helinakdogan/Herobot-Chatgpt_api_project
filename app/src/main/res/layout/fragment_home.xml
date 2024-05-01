@@ -7,11 +7,27 @@
     tools:context=".ui.home.HomeFragment"
     android:background="#020725">
 
+    <!-- Welcome text -->
+    <TextView
+        android:id="@+id/textWelcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Herobot!\nHerobot is a chatbot implementation of ChatGPT."
+        android:textColor="#009688"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="200dp"
+        android:padding="20dp"
+        android:gravity="center"/>
+
+    <!-- Button to start chat -->
     <Button
         android:id="@+id/buttonStartChat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start Chat"
-        android:layout_centerInParent="true"/>
+        android:backgroundTint="#E91E63"
+        android:layout_below="@id/textWelcome"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

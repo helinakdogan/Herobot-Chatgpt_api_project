@@ -7,7 +7,6 @@
     android:padding="16dp">
 
     <!-- Username EditText -->
-
     <EditText
         android:id="@+id/loginUsername"
         android:layout_width="match_parent"
@@ -29,5 +28,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Login" />
+
+    <!-- Sign Up TextView -->
+    <TextView
+        android:id="@+id/textViewSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an account? Sign up here"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
 
 </LinearLayout>

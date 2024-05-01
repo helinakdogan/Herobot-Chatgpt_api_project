@@ -15,30 +15,26 @@
         <activity
             android:name=".ChatActivity"
             android:exported="true" />
-
-        <activity
-            android:name=".Login"
-            android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.LOGIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-
-
-
-
         <activity
             android:name=".SignUpActivity"
             android:exported="true" />
-
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="Login"
+            android:theme="@style/Theme.Herobot.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
 
 
         <activity
             android:name=".MainActivity"
             android:exported="true"
             android:label="MAIN"
-            android:theme="@style/Theme.Herobot">
+            android:theme="@style/Theme.Herobot.NoActionBar">
 
         </activity>
     </application>
