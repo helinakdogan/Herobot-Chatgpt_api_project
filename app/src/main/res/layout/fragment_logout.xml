@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.slideshow.SlideshowFragment"
-    android:background="#020725">
+    tools:context=".ui.logout.LogoutFragment"
+    android:background="@drawable/chatbg">
 
     <TextView
         android:id="@+id/text_slideshow"

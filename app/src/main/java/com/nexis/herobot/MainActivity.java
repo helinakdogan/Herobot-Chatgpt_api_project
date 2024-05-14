@@ -83,9 +83,8 @@ public class MainActivity extends AppCompatActivity {
                 if (destination.getId() == R.id.nav_slideshow) {
                     // Uygulamadan çıkmadan önce kullanıcıya emin misiniz diye bir uyarı göster
                     new AlertDialog.Builder(MainActivity.this)
-                            .setMessage(
-                                    "Do you want to exit the application?")
-                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            .setMessage(getString(R.string.exit_message))
+                            .setPositiveButton(getString(R.string.yes), new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     FirebaseAuth.getInstance().signOut();                                         //logout için değişti
@@ -94,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                                     finish();
                                 }
                             })
-                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            .setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     NavController navController = Navigation.findNavController(MainActivity.this, R.id.nav_host_fragment_content_main);

@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign up!"
+            android:text="@string/signup"
             android:textColor="@color/white"
             android:textSize="25sp"
             android:textAlignment="center"
@@ -37,7 +37,7 @@
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:background="@drawable/login_text"
-        android:hint="Email"
+        android:hint="@string/email"
         android:inputType="text"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -50,7 +50,7 @@
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:background="@drawable/login_text"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -63,7 +63,7 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/darkGreen"
-        android:text="Sign up"
+        android:text="@string/signup"
         android:layout_marginTop="16dp"/>
 
     <TextView
@@ -71,7 +71,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
-        android:text="Login here!"
+        android:text="@string/login"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         android:gravity="center"

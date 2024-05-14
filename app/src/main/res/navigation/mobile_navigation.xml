@@ -13,13 +13,13 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.nexis.herobot.ui.gallery.GalleryFragment"
-        android:label="Chat2"
-        tools:layout="@layout/fragment_gallery" />
+        android:name="com.nexis.herobot.ui.gallery.SettingsFragment"
+        android:label="@string/settings"
+        tools:layout="@layout/fragment_settings" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.nexis.herobot.ui.slideshow.SlideshowFragment"
-        android:label="Logout"
-        tools:layout="@layout/fragment_slideshow" />
+        android:name="com.nexis.herobot.ui.logout.LogoutFragment"
+        android:label="@string/logout"
+        tools:layout="@layout/fragment_logout" />
 </navigation>
