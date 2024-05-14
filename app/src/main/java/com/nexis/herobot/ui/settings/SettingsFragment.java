@@ -1,4 +1,4 @@
-package com.nexis.herobot.ui.gallery;
+package com.nexis.herobot.ui.settings;
 
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.nexis.herobot.databinding.FragmentSettingsBinding;
 import com.nexis.herobot.databinding.FragmentSettingsBinding;
 
 import java.util.Locale;

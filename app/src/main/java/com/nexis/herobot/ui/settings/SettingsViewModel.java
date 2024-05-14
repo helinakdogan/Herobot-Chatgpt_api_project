@@ -1,4 +1,4 @@
-package com.nexis.herobot.ui.gallery;
+package com.nexis.herobot.ui.settings;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
