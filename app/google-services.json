@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1007031774703",
+    "project_id": "herobot-a78a3",
+    "storage_bucket": "herobot-a78a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007031774703:android:359129fcb641527e90da1a",
+        "android_client_info": {
+          "package_name": "com.nexis.herobot"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBARlZDV6aGDA6ttiNWJmYklyBg6vOXyC0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
