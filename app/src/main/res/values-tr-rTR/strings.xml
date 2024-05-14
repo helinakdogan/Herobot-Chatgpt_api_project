@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Herobot</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="settings">Ayarlar</string>
+    <string name="menu_home">Herobot</string>
+    <string name="logout">Çıkış</string>
+    <string name="start_chat">Sohbete Başla</string>
+    <string name="welcome_chat">Herobot\'a hoşgeldin! \n Herobot ChatGPT tabanlı bir sohbet botudur.</string>
+    <string name="signup">Kayıt Ol</string>
+    <string name="email">Email</string>
+    <string name="password">Şifre</string>
+    <string name="login">Giriş Yap</string>
+    <string name="welcome_herobot">Herobot\'a Hoşgeldin!</string>
+    <string name="lets_chat">Sohbete başla!</string>
+    <string name="write">Mesajınızı girin... </string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
+    <string name="exit_message">Uygulamadan çıkmak istiyor musunuz?</string>
+    <string name="switch_language">Dili İngilizceye Çevir</string>
+</resources>
