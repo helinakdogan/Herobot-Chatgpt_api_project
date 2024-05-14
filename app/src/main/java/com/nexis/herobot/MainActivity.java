@@ -1,9 +1,11 @@
 package com.nexis.herobot;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Menu;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -19,16 +21,34 @@ import androidx.navigation.ui.NavigationUI;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.nexis.herobot.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
+    FirebaseAuth auth;
+    FirebaseUser user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+        //logout için gerekli
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
+
+
+
+        //kullanıcı oturumu açık değilse login ekrana yönlendirir
+        if (user == null) {
+            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+            startActivity(intent);
+            finish();
+        }
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -63,14 +83,18 @@ public class MainActivity extends AppCompatActivity {
                 if (destination.getId() == R.id.nav_slideshow) {
                     // Uygulamadan çıkmadan önce kullanıcıya emin misiniz diye bir uyarı göster
                     new AlertDialog.Builder(MainActivity.this)
-                            .setMessage("Uygulamadan çıkmak istediğinizden emin misiniz?")
-                            .setPositiveButton("Evet", new DialogInterface.OnClickListener() {
+                            .setMessage(
+                                    "Do you want to exit the application?")
+                            .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    finish(); // Uygulamayı kapat
+                                    FirebaseAuth.getInstance().signOut();                                         //logout için değişti
+                                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                                    startActivity(intent);
+                                    finish();
                                 }
                             })
-                            .setNegativeButton("Hayır", new DialogInterface.OnClickListener() {
+                            .setNegativeButton("No", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     NavController navController = Navigation.findNavController(MainActivity.this, R.id.nav_host_fragment_content_main);

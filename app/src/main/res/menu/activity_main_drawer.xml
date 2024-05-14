@@ -7,14 +7,17 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/baseline_chat_24"
-            android:title="Herobot" />
+            android:title="Herobot"
+            android:iconTint="@color/darkPink"/>
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/baseline_chat_24"
-            android:title="Chat2" />
+            android:title="Chat2"
+            android:iconTint="@color/darkPink"/>
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/baseline_logout_24"
-            android:title="Logout" />
+            android:title="Logout"
+            android:iconTint="@color/darkPink"/>
     </group>
 </menu>

@@ -1,42 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:background="@drawable/loginbg">
 
-    <!-- Username EditText -->
-    <EditText
-        android:id="@+id/loginUsername"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:hint="Username"
-        android:inputType="text" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
 
-    <!-- Password EditText -->
-    <EditText
-        android:id="@+id/loginPassword"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:hint="Password"
-        android:inputType="textPassword" />
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/logo"
+            android:background="@drawable/logo_round"
+            android:scaleType="centerCrop"/>
 
-    <!-- Login Button -->
-    <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Login" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Herobot!"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:layout_marginTop="16dp"/>
 
-    <!-- Sign Up TextView -->
-    <TextView
-        android:id="@+id/textViewSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Don't have an account? Sign up here"
-        android:layout_marginTop="16dp"
-        android:textColor="@color/black"
-        android:textStyle="bold"/>
+        <EditText
+            android:id="@+id/loginUsername"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:background="@drawable/login_text"
+            android:hint="Email"
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="#AFAFAF"
+            android:layout_marginTop="16dp"/>
 
-</LinearLayout>
+        <EditText
+            android:id="@+id/loginPassword"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:background="@drawable/login_text"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textColorHint="#AFAFAF"
+            android:layout_marginTop="7dp"/>
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/darkGreen"
+            android:text="Login"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/textViewSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:text="Sign up here!"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginTop="2dp"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -77,8 +77,15 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     void addResponse(String response) {
-        messageList.remove(messageList.size() - 1);
-        addToChat(response, Message.SENT_BY_BOT);
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                messageList.remove(messageList.size() - 1);
+                messageAdapter.notifyDataSetChanged();
+                recyclerView.smoothScrollToPosition(messageAdapter.getItemCount());
+                addToChat(response, Message.SENT_BY_BOT);
+            }
+        });
     }
 
     void callAPI(String question) {
@@ -86,7 +93,7 @@ public class ChatActivity extends AppCompatActivity {
 
         JSONObject jsonBody = new JSONObject();
         try {
-            jsonBody.put("model", "GPT-3.5 Turbo");
+            jsonBody.put("model", "gpt-3.5-turbo-0125");
             JSONArray messagesArray = new JSONArray();
             JSONObject messageObject = new JSONObject();
             messageObject.put("role", "user");
@@ -102,7 +109,8 @@ public class ChatActivity extends AppCompatActivity {
 
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/chat/completions")
-                .header("Authorization", "Bearer ")
+                .header("Authorization", "")
+
                 .post(body)
                 .build();
 
@@ -120,7 +128,9 @@ public class ChatActivity extends AppCompatActivity {
                         JSONObject jsonObject = new JSONObject(response.body().string());
                         JSONArray jsonArray = jsonObject.getJSONArray("choices");
                         if (jsonArray.length() > 0) {
-                            String result = jsonArray.getJSONObject(0).getString("text");
+                            JSONObject choice = jsonArray.getJSONObject(0);
+                            JSONObject message = choice.getJSONObject("message");
+                            String result = message.getString("content");
                             addResponse(result.trim());
                         } else {
                             addResponse("Empty response received.");
