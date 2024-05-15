@@ -27,16 +27,6 @@ public class SignUpActivity extends AppCompatActivity {
 
     FirebaseAuth mAuth;
 
-    //public void onStart() {
-    //    super.onStart();
-    // Check if user is signed in (non-null) and update UI accordingly.
-    //    FirebaseUser currentUser = mAuth.getCurrentUser();
-    //    if(currentUser != null){
-    //        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-    //        startActivity(intent);
-    //        finish();
-    //    }
-    //}
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,21 +48,21 @@ public class SignUpActivity extends AppCompatActivity {
                 String username = editTextUsername.getText().toString();
                 String password = editTextPassword.getText().toString();
 
-                if (TextUtils.isEmpty(username)){
-                    Toast.makeText(SignUpActivity.this, "please enter your username", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(username)) {
+                    Toast.makeText(SignUpActivity.this, getString(R.string.enter_username), Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (TextUtils.isEmpty(password)){
-                    Toast.makeText(SignUpActivity.this, "please enter your password", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(password)) {
+                    Toast.makeText(SignUpActivity.this, getString(R.string.enter_password), Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 mAuth.createUserWithEmailAndPassword(username, password)
-                        .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
+                        .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(SignUpActivity.this, "Account created.",
+                                    Toast.makeText(SignUpActivity.this, getString(R.string.create_account),
                                             Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
@@ -80,7 +70,7 @@ public class SignUpActivity extends AppCompatActivity {
 
                                 } else {
                                     // If sign in fails, display a message to the user.
-                                    Toast.makeText(SignUpActivity.this, "Authentication failed.",
+                                    Toast.makeText(SignUpActivity.this, getString(R.string.signup_failed),
                                             Toast.LENGTH_SHORT).show();
                                 }
                             }

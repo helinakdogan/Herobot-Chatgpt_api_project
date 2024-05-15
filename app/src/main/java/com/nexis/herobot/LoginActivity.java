@@ -25,17 +25,6 @@ public class LoginActivity extends AppCompatActivity {
     private TextView textViewSignUp;
     FirebaseAuth mAuth;
 
-    //public void onStart() {
-    //    super.onStart();
-    // Check if user is signed in (non-null) and update UI accordingly.
-    //    FirebaseUser currentUser = mAuth.getCurrentUser();
-    //    if(currentUser != null){
-    //        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-    //        startActivity(intent);
-    //        finish();
-    //    }
-    //}
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,12 +48,12 @@ public class LoginActivity extends AppCompatActivity {
                 String password = editTextPassword.getText().toString();
 
                 // Implement authentication logic here  //firebase bağlanacak
-                if (TextUtils.isEmpty(username)){
-                    Toast.makeText(LoginActivity.this, "please enter your username", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(username)) {
+                    Toast.makeText(LoginActivity.this, getString(R.string.enter_username), Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if (TextUtils.isEmpty(password)){
-                    Toast.makeText(LoginActivity.this, "please enter your password", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(password)) {
+                    Toast.makeText(LoginActivity.this, getString(R.string.enter_password), Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -73,13 +62,13 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(getApplicationContext(), "Login successful!", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), getString(R.string.login_successful), Toast.LENGTH_SHORT).show();
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
                                     finish();
 
                                 } else {
-                                    Toast.makeText(LoginActivity.this, "Authentication failed.",
+                                    Toast.makeText(LoginActivity.this, getString(R.string.login_failed),
                                             Toast.LENGTH_SHORT).show();
 
                                 }

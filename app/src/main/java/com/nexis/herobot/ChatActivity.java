@@ -27,7 +27,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class ChatActivity extends AppCompatActivity {
+public class   ChatActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     TextView welcomeTextView;
     EditText messageEditText;
@@ -89,7 +89,7 @@ public class ChatActivity extends AppCompatActivity {
     }
 
     void callAPI(String question) {
-        messageList.add(new Message("Typing... ", Message.SENT_BY_BOT));
+        messageList.add(new Message(getString(R.string.type), Message.SENT_BY_BOT));
 
         JSONObject jsonBody = new JSONObject();
         try {

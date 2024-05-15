@@ -42,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         user = auth.getCurrentUser();
 
 
-
         //kullanıcı oturumu açık değilse login ekrana yönlendirir
         if (user == null) {
             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
