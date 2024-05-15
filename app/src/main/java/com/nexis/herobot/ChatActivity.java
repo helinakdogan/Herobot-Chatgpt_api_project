@@ -27,7 +27,7 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-public class   ChatActivity extends AppCompatActivity {
+public class ChatActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     TextView welcomeTextView;
     EditText messageEditText;
@@ -110,10 +110,8 @@ public class   ChatActivity extends AppCompatActivity {
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/chat/completions")
                 .header("Authorization", "")
-
                 .post(body)
                 .build();
-
 
         client.newCall(request).enqueue(new Callback() {
             @Override

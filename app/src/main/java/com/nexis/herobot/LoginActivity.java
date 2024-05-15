@@ -66,7 +66,6 @@ public class LoginActivity extends AppCompatActivity {
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                                     startActivity(intent);
                                     finish();
-
                                 } else {
                                     Toast.makeText(LoginActivity.this, getString(R.string.login_failed),
                                             Toast.LENGTH_SHORT).show();
