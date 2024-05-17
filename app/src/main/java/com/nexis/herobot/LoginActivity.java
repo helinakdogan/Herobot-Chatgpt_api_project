@@ -30,24 +30,19 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        // Initialize UI elements
-
         mAuth = FirebaseAuth.getInstance();
 
         editTextUsername = findViewById(R.id.loginUsername);
         editTextPassword = findViewById(R.id.loginPassword);
         buttonLogin = findViewById(R.id.buttonLogin);
-        textViewSignUp = findViewById(R.id.textViewSignUp);   //add textViewSignUp in login xml
+        textViewSignUp = findViewById(R.id.textViewSignUp);
 
-        // Set a click listener for the login button
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Retrieve entered username and password
-                String username = editTextUsername.getText().toString();   //checked
+                String username = editTextUsername.getText().toString();
                 String password = editTextPassword.getText().toString();
 
-                // Implement authentication logic here  //firebase bağlanacak
                 if (TextUtils.isEmpty(username)) {
                     Toast.makeText(LoginActivity.this, getString(R.string.enter_username), Toast.LENGTH_SHORT).show();
                     return;
@@ -62,25 +57,24 @@ public class LoginActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
-                                    Toast.makeText(getApplicationContext(), getString(R.string.login_successful), Toast.LENGTH_SHORT).show();
+                                    FirebaseUser user = mAuth.getCurrentUser();
+                                    String email = user != null ? user.getEmail() : "";
+
                                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                    intent.putExtra("userEmail", email);
                                     startActivity(intent);
                                     finish();
                                 } else {
-                                    Toast.makeText(LoginActivity.this, getString(R.string.login_failed),
-                                            Toast.LENGTH_SHORT).show();
-
+                                    Toast.makeText(LoginActivity.this, getString(R.string.login_failed), Toast.LENGTH_SHORT).show();
                                 }
                             }
                         });
             }
         });
 
-        // Set a click listener for the Sign Up text  -- checked
         textViewSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Start SignUpActivity
                 startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
             }
         });
