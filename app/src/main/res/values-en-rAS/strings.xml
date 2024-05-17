@@ -21,7 +21,7 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="exit_message">Do you want to exit the application?</string>
-    <string name="switch_language">Switch language into Turkish</string>
+    <string name="switch_language">Switch Language to Turkish</string>
     <string name="type">Typing...</string>
     <string name="login_successful">Login successful!</string>
     <string name="login_failed">Login failed</string>

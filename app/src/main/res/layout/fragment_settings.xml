@@ -10,8 +10,8 @@
         android:layout_gravity="center"
         android:background="@drawable/textview_bg"
         android:padding="20dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginLeft="50dp">
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
 
         <TextView
             android:id="@+id/textGallery"
