@@ -48,7 +48,6 @@ public class ChatActivity extends AppCompatActivity {
         welcomeTextView = findViewById(R.id.welcome_text);
         messageEditText = findViewById(R.id.message_edit_text);
         sendButton = findViewById(R.id.send_btn);
-
         messageAdapter = new MessageAdapter(messageList);
         recyclerView.setAdapter(messageAdapter);
 
@@ -90,7 +89,6 @@ public class ChatActivity extends AppCompatActivity {
 
     void callAPI(String question) {
         messageList.add(new Message(getString(R.string.type), Message.SENT_BY_BOT));
-
         JSONObject jsonBody = new JSONObject();
         try {
             jsonBody.put("model", "gpt-3.5-turbo-0125");
@@ -112,13 +110,11 @@ public class ChatActivity extends AppCompatActivity {
                 .header("Authorization", "")
                 .post(body)
                 .build();
-
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(@NonNull Call call, @NonNull IOException e) {
                 addResponse("Failed to load response due to " + e.getMessage());
             }
-
             @Override
             public void onResponse(@NonNull Call call, @NonNull Response response) throws IOException {
                 if (response.isSuccessful()) {

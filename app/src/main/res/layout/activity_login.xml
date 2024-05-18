@@ -54,15 +54,17 @@
             android:textColorHint="#AFAFAF"
             android:layout_marginTop="7dp"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonLogin"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/darkGreen"
             android:text="@string/login"
+            android:textSize="15sp"
             android:padding="10dp"
             android:layout_marginTop="16sp"
-            android:textSize="15sp"/>
+            android:backgroundTint="@color/darkGreen"
+            android:cornerRadius="4dp" />
+
 
         <TextView
             android:id="@+id/textViewSignUp"

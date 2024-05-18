@@ -57,18 +57,20 @@
         android:textColorHint="#AFAFAF"
         android:layout_marginTop="7dp"/>
 
-    <!-- Login Button -->
-    <Button
-        android:id="@+id/buttonSignUp"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/darkGreen"
-        android:text="@string/signup"
-        android:textSize="15sp"
-        android:padding="10dp"
-        android:layout_marginTop="16dp"/>
 
-    <TextView
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSignUp"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="@string/signup"
+            android:textSize="15sp"
+            android:padding="10dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/darkGreen"
+            android:cornerRadius="4dp" />
+
+
+        <TextView
         android:id="@+id/textViewLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

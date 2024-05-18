@@ -38,8 +38,7 @@
             android:textColor="@color/white"
             android:textSize="21sp" />
 
-        <!-- Button to start chat -->
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonStartChat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,11 +46,16 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="30dp"
-            android:backgroundTint="@color/darkGreen"
-            android:elevation="40dp"
-            android:padding="10dp"
             android:text="@string/start_chat"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:padding="10dp"
+            app:backgroundTint="@color/darkGreen"
+            app:cornerRadius="4dp"
+            app:elevation="8dp" />
+
+
     </RelativeLayout>
 
 
