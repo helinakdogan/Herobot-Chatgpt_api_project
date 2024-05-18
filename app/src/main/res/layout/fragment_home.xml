@@ -6,7 +6,7 @@
     tools:context=".ui.home.HomeFragment"
     android:background="@drawable/chatbg">
 
-    <!-- Container for text and button with more transparent grey background -->
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,11 +16,22 @@
         android:background="@drawable/textview_bg"
         android:padding="20dp">
 
+        <ImageView
+            android:id="@+id/imageLogo"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:elevation="30dp"
+            android:src="@drawable/logo_round" />
+
+
         <!-- Welcome text -->
         <TextView
             android:id="@+id/textWelcome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@id/imageLogo"
             android:gravity="center"
             android:padding="10dp"
             android:text="@string/welcome_chat"
@@ -34,11 +45,14 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/textWelcome"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="30dp"
             android:backgroundTint="@color/darkGreen"
-            android:elevation="10dp"
+            android:elevation="40dp"
+            android:padding="10dp"
             android:text="@string/start_chat"
             android:textSize="16sp" />
     </RelativeLayout>
+
 
 </RelativeLayout>

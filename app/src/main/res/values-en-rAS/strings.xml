@@ -10,7 +10,7 @@
     <string name="menu_home">Herobot</string>
     <string name="logout">Logout</string>
     <string name="start_chat">Start Chat</string>
-    <string name="welcome_chat">Welcome to Herobot!\nHerobot is a chatbot implementation of ChatGPT.</string>
+    <string name="welcome_chat">Hey there, I\'m HeroBOT! I\'m here to assist you as a chatbot powered by ChatGPT.</string>
     <string name="signup">Sign Up</string>
     <string name="email">Email</string>
     <string name="password">Password</string>

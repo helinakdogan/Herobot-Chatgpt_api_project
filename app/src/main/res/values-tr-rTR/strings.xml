@@ -10,7 +10,7 @@
     <string name="menu_home">Herobot</string>
     <string name="logout">Çıkış</string>
     <string name="start_chat">Sohbete Başla</string>
-    <string name="welcome_chat">Herobot\'a Hoş Geldin! \n Herobot ChatGPT tabanlı bir sohbet botudur.</string>
+    <string name="welcome_chat">Merhaba, ben HeroBOT! \n ChatGPT tabanlı bir sohbet botu olarak size yardımcı olmaya hazırım.</string>
     <string name="signup">Kayıt Ol</string>
     <string name="email">Email</string>
     <string name="password">Şifre</string>

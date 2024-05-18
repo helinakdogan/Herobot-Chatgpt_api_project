@@ -17,20 +17,23 @@
             android:id="@+id/textGallery"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
             android:layout_centerHorizontal="true"
             android:text="@string/settings"
-            android:textSize="20sp"
+            android:textSize="21sp"
             android:textStyle="bold"/> <!-- Metin boyutunu 20sp olarak ayarladık -->
 
         <Switch
             android:id="@+id/languageSwitch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:layout_below="@id/textGallery"
             android:layout_centerHorizontal="true"
             android:text="@string/switch_language"
             android:textSize="17sp"
-            android:textColor="#DBD1EF" /> <!-- Metin boyutunu 18sp olarak ayarladık -->
+            android:textColor="@color/white" /> <!-- Metin boyutunu 18sp olarak ayarladık -->
 
     </RelativeLayout>
 

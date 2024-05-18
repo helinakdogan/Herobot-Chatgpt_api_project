@@ -10,8 +10,8 @@
         android:gravity="center">
 
         <ImageView
-            android:layout_width="140dp"
-            android:layout_height="140dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:src="@drawable/logo"
             android:background="@drawable/logo_round"
             android:scaleType="centerCrop"/>
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:text="@string/signup"
             android:textColor="@color/white"
-            android:textSize="25sp"
+            android:textSize="23sp"
             android:textAlignment="center"
             android:gravity="center"
             android:layout_marginTop="16dp"/>
@@ -31,11 +31,13 @@
     <EditText
         android:id="@+id/signupUsername"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="42dp"
         android:background="@drawable/login_text"
         android:hint="@string/email"
         android:inputType="text"
         android:textAlignment="center"
+        android:padding="7dp"
+        android:textSize="18sp"
         android:textColor="@color/white"
         android:textColorHint="#AFAFAF"
         android:layout_marginTop="16dp"/>
@@ -44,11 +46,13 @@
     <EditText
         android:id="@+id/signupPassword"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="42dp"
         android:background="@drawable/login_text"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:textAlignment="center"
+        android:padding="7dp"
+        android:textSize="18sp"
         android:textColor="@color/white"
         android:textColorHint="#AFAFAF"
         android:layout_marginTop="7dp"/>
@@ -60,6 +64,8 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/darkGreen"
         android:text="@string/signup"
+        android:textSize="15sp"
+        android:padding="10dp"
         android:layout_marginTop="16dp"/>
 
     <TextView
@@ -69,7 +75,7 @@
         android:clickable="true"
         android:text="@string/login"
         android:textColor="#FFFFFF"
-        android:textSize="18sp"
+        android:textSize="16sp"
         android:gravity="center"
         android:layout_marginTop="2dp"/>
 

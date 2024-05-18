@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
@@ -7,17 +6,14 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/baseline_chat_24"
-            android:title="Herobot"
-            android:iconTint="@color/darkPink"/>
+            android:title="Herobot"/>
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/baseline_settings_24"
-            android:title="@string/settings"
-            android:iconTint="@color/darkPink"/>
+            android:title="@string/settings"/>
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/baseline_logout_24"
-            android:title="@string/logout"
-            android:iconTint="@color/darkPink"/>
+            android:title="@string/logout"/>
     </group>
 </menu>
