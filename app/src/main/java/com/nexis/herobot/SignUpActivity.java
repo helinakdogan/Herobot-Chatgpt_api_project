@@ -22,9 +22,7 @@ public class SignUpActivity extends AppCompatActivity {
 
     private EditText editTextUsername, editTextPassword;
     private Button buttonSignUp;
-
     private TextView textViewLogin;
-
     FirebaseAuth mAuth;
 
     @Override
@@ -34,17 +32,14 @@ public class SignUpActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        // Initialize UI elements
-        editTextUsername = findViewById(R.id.signupUsername);  //signUp xml e eklenecek
+        editTextUsername = findViewById(R.id.signupUsername);
         editTextPassword = findViewById(R.id.signupPassword);
         buttonSignUp = findViewById(R.id.buttonSignUp);
         textViewLogin = findViewById(R.id.textViewLogin);
 
-        // Set a click listener for the sign up button
         buttonSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Retrieve entered username and password
                 String username = editTextUsername.getText().toString();
                 String password = editTextPassword.getText().toString();
 
@@ -69,7 +64,6 @@ public class SignUpActivity extends AppCompatActivity {
                                     finish();
 
                                 } else {
-                                    // If sign in fails, display a message to the user.
                                     Toast.makeText(SignUpActivity.this, getString(R.string.signup_failed),
                                             Toast.LENGTH_SHORT).show();
                                 }
@@ -81,7 +75,6 @@ public class SignUpActivity extends AppCompatActivity {
         textViewLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Start SignUpActivity
                 startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
             }
         });

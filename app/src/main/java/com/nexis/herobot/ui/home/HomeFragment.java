@@ -24,10 +24,8 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        // Butonu bul
         Button buttonStartChat = binding.buttonStartChat;
 
-        // Butona tıklanma olayını ekle
         buttonStartChat.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,10 +36,7 @@ public class HomeFragment extends Fragment {
         return root;
     }
 
-
-    // ChatActivity'i başlatmak için metod
     private void startChatActivity() {
-        // Intent ile ChatActivity'i başlat
         Intent intent = new Intent(getActivity(), ChatActivity.class);
         startActivity(intent);
     }

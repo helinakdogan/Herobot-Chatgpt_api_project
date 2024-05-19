@@ -30,7 +30,7 @@ public class SettingsFragment extends Fragment {
                 new ViewModelProvider(this).get(SettingsViewModel.class);
 
         binding = FragmentSettingsBinding.inflate(inflater, container, false);
-        View root = binding.getRoot(); // Hata burada çıkabilir, kontrol edelim
+        View root = binding.getRoot();
 
         final TextView textView = binding.textGallery;
         galleryViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
@@ -51,10 +51,9 @@ public class SettingsFragment extends Fragment {
             } else {
                 setLocale("en");
             }
-            getActivity().recreate(); // Aktiviteyi yeniden başlat
+            getActivity().recreate();
         });
-
-        return root; // Yine root döndürülüyor, sorun olmamalı
+        return root;
     }
 
     @Override
