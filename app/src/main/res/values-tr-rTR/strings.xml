@@ -22,6 +22,7 @@
     <string name="no">Hayır</string>
     <string name="exit_message">Uygulamadan çıkmak istiyor musunuz?</string>
     <string name="switch_language">Dili İngilizce\'ye Çevir</string>
+    <string name="switch_theme">Temayı Değiştir</string>
     <string name="type">Yazıyor...</string>
     <string name="login_successful">Giriş Başarılı!</string>
     <string name="login_failed">Giriş başarısız</string>
@@ -29,4 +30,7 @@
     <string name="enter_password">Lütfen, şifrenizi giriniz</string>
     <string name="create_account">Hesabınız oluşturuldu!</string>
     <string name="signup_failed">Hesap oluşturulamadı</string>
+    <string name="light_mode">Açık</string>
+    <string name="dark_mode">Koyu</string>
+    <string name="theme">Tema:</string>
 </resources>

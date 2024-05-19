@@ -22,6 +22,7 @@
     <string name="no">No</string>
     <string name="exit_message">Do you want to exit the application?</string>
     <string name="switch_language">Switch Language to Turkish</string>
+    <string name="switch_theme">Change Theme</string>
     <string name="type">Typing...</string>
     <string name="login_successful">Login successful!</string>
     <string name="login_failed">Login failed</string>
@@ -29,5 +30,8 @@
     <string name="enter_password">Please, enter your password</string>
     <string name="create_account">Account created!</string>
     <string name="signup_failed">Sign Up failed</string>
+    <string name="light_mode">Lıght</string>
+    <string name="dark_mode">Dark</string>
+    <string name="theme">Theme:</string>
 
 </resources>

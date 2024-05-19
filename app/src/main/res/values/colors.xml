@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#B991FF</color>
+    <color name="purple_200">#A26DFD</color>
     <color name="purple_500">#302783</color>
     <color name="purple_700">#000315</color>
-    <color name="darkPink">#E91E63</color>
-    <color name="lightPink">#FDCCDD</color>
+    <color name="purple_900">#000107</color>
+    <color name="darkPink">#DA2789</color>
+    <color name="lightPink">#FFA5CF</color>
     <color name="darkGreen">#009688</color>
     <color name="lightGreen">#51E6D0</color>
+    <color name="darkerGreen">#01554D</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 </resources>

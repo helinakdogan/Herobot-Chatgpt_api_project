@@ -6,13 +6,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.Switch;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.android.material.button.MaterialButton;
 import com.nexis.herobot.databinding.FragmentSettingsBinding;
 
 import java.util.Locale;
@@ -53,6 +56,29 @@ public class SettingsFragment extends Fragment {
             }
             getActivity().recreate();
         });
+
+        MaterialButton btnDarkMode = binding.btnDarkMode;
+        MaterialButton btnLightMode = binding.btnLightMode;
+
+        boolean isDarkMode = preferences.getBoolean("Dark_Mode", false);
+        if (isDarkMode) {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
+
+        btnDarkMode.setOnClickListener(v -> {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+            editor.putBoolean("Dark_Mode", true);
+            editor.apply();
+        });
+
+        btnLightMode.setOnClickListener(v -> {
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+            editor.putBoolean("Dark_Mode", false);
+            editor.apply();
+        });
+
         return root;
     }
 
