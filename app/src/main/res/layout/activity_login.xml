@@ -63,7 +63,7 @@
             android:padding="10dp"
             android:layout_marginTop="16sp"
             android:backgroundTint="@color/darkGreen"
-            android:cornerRadius="4dp" />
+            android:radius="4dp" />
 
 
         <TextView
