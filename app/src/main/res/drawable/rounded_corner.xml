@@ -1,20 +1,18 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Gradyan gölge katmanı -->
     <item>
         <shape android:shape="rectangle">
             <corners android:radius="10dip"/>
             <gradient
                 android:startColor="#22000000"
                 android:endColor="#00000000"
-                android:angle="90"/> <!-- Gradyan gölge açısı değiştirildi -->
+                android:angle="90"/>
         </shape>
     </item>
 
-    <!-- Ana şekil -->
-    <item android:bottom="4dp" android:right="4dp"> <!-- Gölge miktarı artırıldı -->
+    <item android:bottom="4dp" android:right="4dp">
         <shape android:shape="rectangle">
             <corners android:radius="10dip"/>
-            <stroke android:width="1dp" android:color="#FFFFFF"/> <!-- Beyaz çerçeve -->
+            <stroke android:width="1dp" android:color="#FFFFFF"/>
         </shape>
     </item>
 </layer-list>

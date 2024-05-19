@@ -41,7 +41,6 @@ public class SettingsFragment extends Fragment {
         preferences = getActivity().getSharedPreferences("Settings", getActivity().MODE_PRIVATE);
         editor = preferences.edit();
 
-        // Kullanıcının dil tercihini kontrol et
         String language = preferences.getString("My_Lang", "en");
         setLocale(language);
 
